@@ -23,7 +23,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch and update download links
     fetchDownloadLinks();
+
+    // Start platform text rotation
+    rotatePlatformText();
 });
+
+function rotatePlatformText() {
+    const textEl = document.getElementById('platform-text');
+    if (!textEl) return;
+
+    const platforms = ['Windows', 'MacOS', 'Android', 'iOS'];
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Fade out
+        textEl.style.opacity = 0;
+        textEl.style.transform = 'translateY(10px)';
+        textEl.style.transition = 'all 0.5s ease';
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % platforms.length;
+            textEl.textContent = platforms[currentIndex];
+
+            // Fade in
+            textEl.style.opacity = 1;
+            textEl.style.transform = 'translateY(0)';
+        }, 500); // Sync with transition duration
+    }, 5000);
+}
 
 const VERSION_URL = "https://raw.githubusercontent.com/ngaoss/work/main/version.json";
 

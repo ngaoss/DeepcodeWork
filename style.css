@@ -176,6 +176,12 @@ main {
     letter-spacing: -0.02em;
 }
 
+#platform-text {
+    display: inline-block;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+}
+
 /* Download Grid */
 .download-grid {
     border-top: 1px solid var(--border-color);
