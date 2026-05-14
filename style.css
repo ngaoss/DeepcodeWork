@@ -184,7 +184,7 @@ main {
 
 /* Download Grid */
 .download-grid {
-    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
     padding-bottom: 40px;
     margin-top: auto;
 }
@@ -196,7 +196,8 @@ main {
 }
 
 .grid-label {
-    padding: 40px 24px 40px 0;
+    padding: 0 24px 40px 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .grid-label h2 {
