@@ -64,8 +64,9 @@ async function fetchDownloadLinks() {
 
         // Mapping keys from JSON to Element IDs
         const mapping = {
-            'windowsUrl': ['dl-windows', 'dl-header'],
-            'macosUrl': ['dl-macos'],
+            'windowsUrl': ['dl-windows-x64', 'dl-windows-arm64', 'dl-header'],
+            'macosUrl': ['dl-macos-apple', 'dl-macos-intel'],
+            'linuxUrl': ['dl-linux'],
             'androidUrl': ['dl-android'],
             'downloadUrl': ['dl-header'] // Fallback for header
         };
