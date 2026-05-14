@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add simple hover effect for the logo
     const logo = document.querySelector('.logo');
     logo.addEventListener('mouseenter', () => {
-        const logoIcon = document.querySelector('.logo-icon');
-        if (logoIcon) {
-            logoIcon.style.transform = 'scale(1.1) rotate(5deg)';
-            logoIcon.style.transition = 'transform 0.3s ease';
+        const logoImg = document.querySelector('.logo-img');
+        if (logoImg) {
+            logoImg.style.transform = 'scale(1.1) rotate(5deg)';
+            logoImg.style.transition = 'transform 0.3s ease';
         }
     });
 
     logo.addEventListener('mouseleave', () => {
-        const logoIcon = document.querySelector('.logo-icon');
-        if (logoIcon) {
-            logoIcon.style.transform = 'scale(1) rotate(0deg)';
+        const logoImg = document.querySelector('.logo-img');
+        if (logoImg) {
+            logoImg.style.transform = 'scale(1) rotate(0deg)';
         }
     });
 
@@ -37,10 +37,9 @@ async function fetchDownloadLinks() {
 
         // Mapping keys from JSON to Element IDs
         const mapping = {
-            'windowsUrl': ['dl-windows-x64', 'dl-windows-arm64', 'dl-header'],
-            'macosUrl': ['dl-macos-apple', 'dl-macos-intel'],
+            'windowsUrl': ['dl-windows', 'dl-header'],
+            'macosUrl': ['dl-macos'],
             'androidUrl': ['dl-android'],
-            'iosUrl': ['dl-ios'],
             'downloadUrl': ['dl-header'] // Fallback for header
         };
 
