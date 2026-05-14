@@ -289,14 +289,28 @@ main {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        padding: 60px 0;
+        text-align: center;
+    }
+
     .hero-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 24px;
     }
 
     .hero-text h1 {
-        font-size: 40px;
+        font-size: 34px;
+    }
+
+    #platform-text {
+        min-width: 0;
+        display: inline;
     }
 
     .grid-container {
@@ -306,6 +320,20 @@ main {
     .os-column {
         border-left: none;
         border-bottom: 1px solid var(--border-color);
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .column-header {
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .download-list a {
+        justify-content: center;
     }
 
     .nav-links {
