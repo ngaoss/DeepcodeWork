@@ -190,14 +190,18 @@ main {
 }
 
 .grid-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .grid-label {
-    padding: 0 24px 40px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 40px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .grid-label h2 {
@@ -206,8 +210,8 @@ main {
 }
 
 .os-column {
-    padding: 60px 32px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 40px 32px;
+    border-left: 1px solid var(--border-color);
 }
 
 .os-column:last-child {
@@ -337,7 +341,15 @@ main {
     }
 
     .grid-container {
+        display: flex;
         flex-direction: column;
+        border-top: none;
+    }
+
+    .grid-label {
+        padding: 30px 24px 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
     }
 
     .os-column {
@@ -357,6 +369,10 @@ main {
 
     .download-list a {
         justify-content: flex-start;
+    }
+
+    .nav-actions {
+        display: none;
     }
 
     .nav-links {
